@@ -31,11 +31,14 @@ def brute_force(point_set):
                 point1 = point_set[i]
                 point2 = point_set[j]
 
+    return shortest_distance
+
 """ TODO: Make a point sorting function """
 
 def efficient_closest_pair(p, q):
     if len(p) <= 3:
-        brute_force(p)
+        return brute_force(p)
+
     else:
         pl = p[:int(len(p)/2)]
         ql = q[:int(len(q)/2)]
@@ -45,4 +48,23 @@ def efficient_closest_pair(p, q):
         dl = efficient_closest_pair(pl, ql)
         dr = efficient_closest_pair(pr, qr)
         
-        min_distance = min(dl, dr)
+        d = min(dl, dr)
+        m = p[int(n/2) - 1][0]
+
+        s = []
+        for point in q:
+            if Math.abs(point[0] - m < d):
+                s[] = point
+
+        dminsq = d ** 2
+
+        for i in range(len(s) - 1):
+            k = i + 1
+
+            while k <= len(s) and (s[k][1] - s[i][1]) ** 2 < dminsq:
+                dminsq = min((s[k][0] - s[i][0]) ** 2
+                        + (s[k][1] - s[i][1]) ** 2,
+                        dminsq)
+                k += 1
+
+        return math.sqrt(dminsq)

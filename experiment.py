@@ -49,12 +49,12 @@ def efficient_closest_pair(p, q):
         dr = efficient_closest_pair(pr, qr)
         
         d = min(dl, dr)
-        m = p[int(n/2) - 1][0]
+        m = p[int(len(p)/2) - 1][0]
 
         s = []
         for point in q:
-            if Math.abs(point[0] - m < d):
-                s[] = point
+            if abs(point[0] - m < d):
+                s.append(point)
 
         dminsq = d ** 2
 
@@ -68,3 +68,12 @@ def efficient_closest_pair(p, q):
                 k += 1
 
         return math.sqrt(dminsq)
+
+a = [(0, 0),
+     (0.5, 26),
+     (1, 27),
+     (4, 30),
+     (10, 100)]
+
+print(brute_force(a))
+print(efficient_closest_pair(a, a))

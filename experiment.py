@@ -1,3 +1,8 @@
+# Ankur Gupta
+# agupta4@wpi.edu
+# CS2223 Project 2
+
+import time
 import math
 import sys
 

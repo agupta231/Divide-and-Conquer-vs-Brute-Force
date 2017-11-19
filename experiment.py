@@ -13,7 +13,7 @@ def effRec(n):
 def effBF(n):
     pass
 
-def bruteForce(point_set):
+def brute_force(point_set):
     num_points = len(point_set)
 
     shortest_distance = sys.maxsize - 1
@@ -30,3 +30,8 @@ def bruteForce(point_set):
                 shortest_distance = distance
                 point1 = point_set[i]
                 point2 = point_set[j]
+
+""" TODO: Make a point sorting function """
+
+def efficient_closest_pair(p, q):
+    

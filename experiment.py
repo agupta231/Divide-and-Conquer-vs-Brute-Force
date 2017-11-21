@@ -169,18 +169,18 @@ print("input.txt")
 effBF(input_array)
 effRec(input_array)
 
-print("required_test")
-effBF(required_test)
-effRec(required_test)
-
-print("test1")
-effBF(custom_test1)
-effRec(custom_test1)
-
-print("test2")
-effBF(custom_test2)
-effRec(custom_test2)
-
-print("test3")
-effBF(custom_test3)
-effRec(custom_test3)
+# print("required_test")
+# effBF(required_test)
+# effRec(required_test)
+# 
+# print("test1")
+# effBF(custom_test1)
+# effRec(custom_test1)
+# 
+# print("test2")
+# effBF(custom_test2)
+# effRec(custom_test2)
+# 
+# print("test3")
+# effBF(custom_test3)
+# effRec(custom_test3)

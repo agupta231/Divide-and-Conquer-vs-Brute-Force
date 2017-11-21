@@ -119,14 +119,6 @@ def sortX(arr):
 def sortY(arr):
     return sorted(arr, key=lambda x: x[1])
 
-
-a = [(0, 0),
-     (0.2, 0.69420),
-     (0.5, 26),
-     (1, 27),
-     (4, 30),
-     (10, 100)]
-
 input_array = read_input("input.txt")
 effBF(input_array)
 effRec(input_array)

@@ -2,11 +2,13 @@
 # agupta4@wpi.edu
 # CS2223 Project 2
 
+# Imports
 import time
 import math
 import sys
 
 
+# Timer function for the recursive method
 def effRec(n):
     p = sortX(n)
     q = sortY(n)
@@ -17,6 +19,8 @@ def effRec(n):
     
     print("Efficient Algorithm Distance: " + str(distance) + " Time: " + str(end_time - start_time))
 
+
+# Timer function for the brute force method
 def effBF(n):
     start_time = time.clock()
     distance = brute_force(n)
@@ -25,6 +29,8 @@ def effBF(n):
     print("Brute Force Distance: " + str(distance) + " Time: " + str(end_time - start_time))
 
 
+# Brute force function. Takes in a list and compares each value until a shortest distance
+#     is found
 def brute_force(point_set):
     num_points = len(point_set)
 
@@ -46,6 +52,8 @@ def brute_force(point_set):
     return shortest_distance
 
 
+# Recursive function. Takes in 2 lists: one with the points sorted with respect to x
+#     and one with the points sorted with respect to y
 def efficient_closest_pair(p, q):
     if len(p) <= 3:
         return brute_force(p)
@@ -81,6 +89,7 @@ def efficient_closest_pair(p, q):
         return math.sqrt(dminsq)
 
 
+# Parser for the input file that will be given by the grader
 def read_input(filename):
     points_array = []
 
@@ -112,10 +121,12 @@ def read_input(filename):
     return points_array
 
 
+# Returns the array sorted with respect to the x coordinate
 def sortX(arr):
     return sorted(arr, key=lambda x: x[0])
 
 
+# Returns the array sorted with respect to the y coordinate
 def sortY(arr):
     return sorted(arr, key=lambda x: x[1])
 

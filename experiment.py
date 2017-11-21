@@ -10,8 +10,10 @@ import sys
 def effRec(n):
     pass
 
+
 def effBF(n):
     pass
+
 
 def brute_force(point_set):
     num_points = len(point_set)
@@ -69,11 +71,53 @@ def efficient_closest_pair(p, q):
 
         return math.sqrt(dminsq)
 
+
+def read_input(filename):
+    points_array = []
+
+    with open(filename) as file_pointer:
+        points_array = []
+
+        for line in file_pointer:
+            for i in range(len(line)):
+                if line[i] == "(":
+                    flag_first_point = True
+                    flag_second_point = False
+                    first_point = ""
+                    second_point = ""
+
+                    for j in range(i + 1, len(line)):
+                        if line[j] == ",":
+                            flag_first_point = False
+                            flag_second_point = True
+                        elif line[j] == ")":
+                            i = j
+                            break
+                        elif flag_first_point:
+                            first_point += line[j]
+                        elif flag_second_point:
+                            second_point += line[j]
+
+                    print(first_point)
+                    print(second_point)
+
+                    points_array.append((int(first_point), int(second_point)))
+
+
+def sortX(arr):
+    pass
+
+def sortY(arr):
+    pass
+
 a = [(0, 0),
+     (0.2, 0.69420),
      (0.5, 26),
      (1, 27),
      (4, 30),
      (10, 100)]
+
+read_input("input.txt")
 
 print(brute_force(a))
 print(efficient_closest_pair(a, a))

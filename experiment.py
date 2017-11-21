@@ -72,7 +72,7 @@ def efficient_closest_pair(p, q):
         for i in range(len(s) - 1):
             k = i + 1
 
-            while k <= len(s) and (s[k][1] - s[i][1]) ** 2 < dminsq:
+            while k < len(s) and (s[k][1] - s[i][1]) ** 2 < dminsq:
                 dminsq = min((s[k][0] - s[i][0]) ** 2
                         + (s[k][1] - s[i][1]) ** 2,
                         dminsq)
@@ -113,11 +113,11 @@ def read_input(filename):
 
 
 def sortX(arr):
-    return sorted(inputArr, key=lambda x: x[0])
+    return sorted(arr, key=lambda x: x[0])
 
 
 def sortY(arr):
-    return sorted(inputArr, key=lambda x: x[1])
+    return sorted(arr, key=lambda x: x[1])
 
 
 a = [(0, 0),
@@ -127,10 +127,6 @@ a = [(0, 0),
      (4, 30),
      (10, 100)]
 
-
-print(inputArr)
-print(sortX(inputArr))
-print(sortY(inputArr))
-
-print(brute_force(a))
-print(efficient_closest_pair(a, a))
+input_array = read_input("input.txt")
+effBF(input_array)
+effRec(input_array)

@@ -98,17 +98,18 @@ def read_input(filename):
                         elif flag_second_point:
                             second_point += line[j]
 
-                    print(first_point)
-                    print(second_point)
-
                     points_array.append((int(first_point), int(second_point)))
+    
+    return points_array
 
 
 def sortX(arr):
-    pass
+    return sorted(inputArr, key=lambda x: x[0])
+
 
 def sortY(arr):
-    pass
+    return sorted(inputArr, key=lambda x: x[1])
+
 
 a = [(0, 0),
      (0.2, 0.69420),
@@ -117,7 +118,12 @@ a = [(0, 0),
      (4, 30),
      (10, 100)]
 
-read_input("input.txt")
+inputArr = read_input("input.txt")
+
+print(inputArr)
+print(sorted(inputArr, key=lambda x: x[0]))
+print(sortX(inputArr))
+print(sortY(inputArr))
 
 print(brute_force(a))
 print(efficient_closest_pair(a, a))

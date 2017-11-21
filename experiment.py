@@ -35,7 +35,6 @@ def brute_force(point_set):
 
     return shortest_distance
 
-""" TODO: Make a point sorting function """
 
 def efficient_closest_pair(p, q):
     if len(p) <= 3:

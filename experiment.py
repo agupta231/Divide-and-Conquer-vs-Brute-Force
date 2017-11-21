@@ -8,11 +8,21 @@ import sys
 
 
 def effRec(n):
-    pass
+    p = sortX(n)
+    q = sortY(n)
 
+    start_time = time.clock()
+    distance = efficient_closest_pair(p, q)
+    end_time = time.clock()
+    
+    print("Efficient Algorithm Distance: " + str(distance) + " Time: " + str(end_time - start_time))
 
 def effBF(n):
-    pass
+    start_time = time.clock()
+    distance = brute_force(n)
+    end_time = time.clock()
+    
+    print("Brute Force Distance: " + str(distance) + " Time: " + str(end_time - start_time))
 
 
 def brute_force(point_set):
@@ -117,10 +127,8 @@ a = [(0, 0),
      (4, 30),
      (10, 100)]
 
-inputArr = read_input("input.txt")
 
 print(inputArr)
-print(sorted(inputArr, key=lambda x: x[0]))
 print(sortX(inputArr))
 print(sortY(inputArr))
 

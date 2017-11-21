@@ -119,6 +119,57 @@ def sortX(arr):
 def sortY(arr):
     return sorted(arr, key=lambda x: x[1])
 
+required_test = [(0,0),
+                 (7,6),
+                 (2,20),
+                 (12,5),
+                 (16,16),
+                 (5,8),
+                 (19,7),
+                 (14,22),
+                 (8,19),
+                 (7,29),
+                 (10,11),
+                 (1,13)]
+
+custom_test1 = [(1,2),
+         (2,42),
+         (1.3,23)]
+
+
+custom_test2 = [(0,0),
+         (1,5),
+         (123,23),
+         (2, 50),
+         (34,2),
+         (493,23),
+         (2,50),
+         (12,49),
+         (340,230)]
+
+custom_test3 = [(i / 2, i ** 2) for i in range(10000)] 
+
+
+
+
 input_array = read_input("input.txt")
+
+print("input.txt")
 effBF(input_array)
 effRec(input_array)
+
+print("required_test")
+effBF(required_test)
+effRec(required_test)
+
+print("test1")
+effBF(custom_test1)
+effRec(custom_test1)
+
+print("test2")
+effBF(custom_test2)
+effRec(custom_test2)
+
+print("test3")
+effBF(custom_test3)
+effRec(custom_test3)

@@ -6,7 +6,7 @@
 import time
 import math
 import sys
-
+from random import *
 
 # Timer function for the recursive method
 def effRec(n):
@@ -68,7 +68,7 @@ def efficient_closest_pair(p, q):
         dr = efficient_closest_pair(pr, qr)
         
         d = min(dl, dr)
-        m = p[int(len(p)/2) - 1][0]
+        m = p[int(math.ceil(len(p)/2)) - 1][0]
 
         s = []
         for point in q:
@@ -162,7 +162,6 @@ custom_test3 = [(i / 2, i ** 2) for i in range(10000)]
 
 
 
-
 input_array = read_input("input.txt")
 
 print("input.txt")
@@ -180,7 +179,7 @@ effRec(input_array)
 # print("test2")
 # effBF(custom_test2)
 # effRec(custom_test2)
-# 
+
 # print("test3")
 # effBF(custom_test3)
 # effRec(custom_test3)
